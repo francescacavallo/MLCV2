@@ -64,7 +64,7 @@ hold on;
 scatter(matchedPointsA.Location(:, 1), matchedPointsA.Location(:, 2), 50, 'x', 'MarkerEdgeColor', 'green');
 hold on;
 scatter(3.*matchedPointsA3.Location(:, 1), 3.*matchedPointsA3.Location(:, 2), 50, 'x', 'MarkerEdgeColor', 'red');
-% overlap images showing matching points
+% overlap images & matching points
 figure
 showMatchedFeatures(IA,IA_reduced3,matchedPointsA,matchedPointsA3); 
 
