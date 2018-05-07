@@ -19,7 +19,7 @@ end
 XWorldLimits = [min(projected(:,1)), max(projected(:,1))];
 YWorldLimits = [min(projected(:,2)), max(projected(:,2))];
 tot_cols = round(max(projected(:,1))-min(projected(:,1)));
-tot_rows = round(max(projected(:,2))-min(projected(:,1)));
+tot_rows = round(max(projected(:,2))-min(projected(:,2)));
 
 img_transformed = uint8(zeros(tot_rows, tot_cols));
 ref = imref2d([tot_rows, tot_cols]);
@@ -34,11 +34,9 @@ for i = 1:size(projected, 1)
     X = round(X - XWorldLimits(1)) + 1;
     Y = round(Y - YWorldLimits(1)) + 1;
     img_transformed(Y, X) = colour;
-    %distance = 
-    %error = img_transformed
+
 end
 
 end
-    %distance(i) =sqrt((imgb(i,2)-imga(i,2))^2+(imgb(i,1)-imga(i,1))^2);
 
 
