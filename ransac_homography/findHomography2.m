@@ -1,4 +1,4 @@
-function [H corrPtIdx] = findHomography2(pts1,pts2)
+function [H, corrPtIdx] = findHomography2(pts1,pts2)
 % [H corrPtIdx] = findHomography(pts1,pts2)
 %	Find the homography between two planes using a set of corresponding
 %	points. PTS1 = [x1,x2,...;y1,y2,...]. RANSAC method is used.
