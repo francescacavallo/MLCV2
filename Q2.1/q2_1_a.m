@@ -1,4 +1,4 @@
-%%%%%%%%%%%%%%%%%%%% Q2.1 %%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% Q2.1.a %%%%%%%%%%%%%%%%%%%
 clear 
 clc
 close all
@@ -16,8 +16,10 @@ end
 
 % ------------ Compare original size and reduced by 2 -----------
 %images
-IA = images{3}; grayIA =im2single(rgb2gray(IA)); 
-IA_reduced2 = imresize(IA, 0.5); grayIA_reduced2 = imresize(grayIA, 0.5);
+IA = images{3}; 
+grayIA =im2single(rgb2gray(IA)); 
+IA_reduced2 = imresize(IA, 0.5); 
+grayIA_reduced2 = imresize(grayIA, 0.5);
 
 % Find interest points using method from Q1
 harrisA =findInterest(grayIA);
@@ -73,13 +75,11 @@ error3 = HA(matchedPointsA.Location, 3*matchedPointsA3.Location);
 
 
 
-
-
-
     
 %------------------------- functions -------------------    
 function harrisA =findInterest(grayIA)
-[yA,xA] = harrisDetect(grayIA,0.01); harrisA = cornerPoints([xA,yA]); 
+[yA,xA] = harrisDetect(grayIA,0.07); 
+harrisA = cornerPoints([xA,yA]); 
 end
 
 function []=plotIP(IA, harrisA)
